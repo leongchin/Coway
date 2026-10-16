@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coway Icon 2 Sample PDP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#00A8E1; --blue-2:#0080C6; --ink:#1B2529; --sale:#F35958;
+  --mist:#EFF8FE; --line:#E5E9EC; --grey:#90A0A6; --soft:#F6F8F9; --paper:#FFFFFF; --body:#46555B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.narrow{max-width:1180px;margin:0 auto;padding:0 20px}.narrow>*{max-width:820px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(26px,3vw,34px);font-weight:900;line-height:1.2}
+h2{font-size:clamp(28px,3.6vw,44px);font-weight:900;line-height:1.15;letter-spacing:-.01em;margin:10px 0 14px}
+h2 .soft{color:var(--grey)}
+h3{font-size:19px;font-weight:700;line-height:1.3}
+p.sub{font-size:17px;color:var(--body);max-width:640px}
+.center{text-align:center}.center p.sub{margin:0 auto}
+.sec{padding:88px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:16px 30px;border-radius:999px;border:0;cursor:pointer;font-size:16px;transition:.2s}
+.btn:hover{background:var(--blue-2)}
+.btn.block{display:flex;width:100%}
+.btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.stars{color:#F5A623;letter-spacing:1px}
+.sample{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.08em;background:#FFF1C2;color:#7A5B00;border-radius:4px;padding:2px 6px;vertical-align:middle;margin-left:6px}
+
+/* draft bar + announcement */
+.draft{background:#000;color:#fff;font-size:12px;text-align:center;padding:6px 16px}
+.announce{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:9px 16px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+.announce .dot{width:7px;height:7px;border-radius:50%;background:#1CCC92;display:inline-block}
+.announce b{letter-spacing:.08em}
+.announce code{border:1px solid #3A474C;border-radius:999px;padding:2px 10px;font-family:inherit;font-weight:700;color:#BFF3FF}
+header.site{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px}.hicons{display:flex;gap:18px;justify-content:flex-end;align-items:center}.hicons a{display:flex;position:relative}.cart .cnt{position:absolute;top:-6px;right:-8px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;border-radius:999px;min-width:16px;height:16px;display:flex;align-items:center;justify-content:center}
+header.site nav{display:flex;gap:30px;font-size:15px;font-weight:500;color:var(--ink)}header.site nav a{display:flex;align-items:center;gap:5px}
+header.site nav a{text-decoration:none}
+@media(max-width:820px){header.site nav{display:none}header.site .wrap{grid-template-columns:1fr 1fr}}
+
+/* PDP top */
+.pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;padding:32px 20px 56px;max-width:1180px;margin:0 auto;align-items:start}.pdp>.gal{position:sticky;top:78px}
+.gal-main{background:var(--soft);border-radius:22px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gal-main{position:relative}.gal-main #gmain{width:86%;height:86%;object-fit:contain}.gal-main .award{position:absolute;top:16px;right:16px;width:84px;height:84px;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(0,0,0,.18));z-index:2}
+.gal-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:12px}
+.gal-thumbs img{aspect-ratio:1/1;object-fit:cover;background:var(--soft);border-radius:12px;cursor:pointer;border:2px solid transparent}
+.gal-thumbs img.on{border-color:var(--blue)}
+.rating{display:flex;gap:8px;align-items:center;font-size:14px;margin-bottom:8px}
+.rating b{font-weight:700}
+.meta{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 14px;font-size:14px}
+.meta span{background:var(--mist);color:var(--blue-2);padding:5px 12px;border-radius:999px;font-weight:700}
+.oneliner{font-size:16.5px;color:var(--body)}
+.ticks{list-style:none;margin:16px 0 12px}
+.ticks li{padding:7px 0 7px 30px;position:relative;font-weight:500}
+.ticks li::before{content:"";position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/12px no-repeat}
+.small{font-size:13px;color:var(--grey)}
+.sold{font-size:14px;font-weight:700;margin-top:6px}
+.promo{margin:16px 0;border:1.5px dashed var(--blue);border-radius:14px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;font-size:14px;background:var(--mist)}
+.promo code{font-family:inherit;font-weight:900;color:var(--blue-2);letter-spacing:.06em}
+.plans-title{font-weight:900;font-size:18px;margin:18px 0 10px}
+.plan{border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:10px;cursor:pointer;position:relative;background:#fff;transition:.15s}
+.plan.on{border-color:var(--blue);background:var(--mist)}
+.plan .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.plan .name{font-weight:700}
+.plan .price{font-weight:900;font-size:18px}
+.plan .price s{font-weight:500;color:var(--grey);font-size:13px;margin-right:6px}
+.plan .desc{font-size:13.5px;color:var(--body)}
+.plan .save{position:absolute;top:-10px;right:14px;background:var(--sale);color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:3px 9px}
+.plan .more{display:none;margin-top:10px;font-size:13.5px;border-top:1px solid #CFE8F5;padding-top:10px}
+.plan.on .more{display:block}
+.plan .more div{padding:2px 0}
+.plan .more b{color:var(--blue-2)}
+.savingline{text-align:center;font-size:14px;margin:12px 0}
+.savingline b{color:var(--sale)}
+.assure{display:flex;justify-content:center;gap:18px;font-size:13px;color:var(--body);margin-top:12px;flex-wrap:wrap}
+.linkbtn{background:none;border:0;color:var(--blue-2);font-weight:700;font-size:14px;cursor:pointer;text-decoration:underline;display:block;margin:12px auto 0}
+.quote{margin-top:20px;border:1px solid var(--line);border-radius:16px;padding:16px;font-size:15px}
+.quote small{display:block;color:var(--grey);margin-top:8px}.kol{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;border-style:dashed;border-color:#C9A227}.kav{width:56px;height:56px;border-radius:50%;background:var(--mist);color:var(--blue-2);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:13px}.kol .pos{color:#7A5B00;background:#FFF6D6;border-radius:8px;padding:6px 8px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:20px}
+.trio div{text-align:center;padding:14px 6px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.trio div+div{border-left:1px solid var(--line)}
+.trio svg{display:block;margin:0 auto 6px}
+.pay{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.pay{display:grid!important;grid-template-columns:repeat(4,72px);justify-content:start;gap:10px 14px}.pay span{border:0;padding:0;height:28px;display:flex;align-items:center;justify-content:center;background:none}.pay img{height:22px;width:auto;max-width:72px;object-fit:contain}
+details.acc{border-bottom:1px solid var(--line)}
+details.acc:first-of-type{margin-top:18px;border-top:1px solid var(--line)}
+details.acc summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:700;display:flex;justify-content:space-between}
+details.acc summary::after{content:"⌄";color:var(--grey)}
+details.acc[open] summary::after{content:"⌃"}
+details.acc .in{padding:0 0 16px;font-size:14.5px;color:var(--body)}
+details.acc .in p+p{margin-top:8px}
+@media(max-width:900px){.pdp{grid-template-columns:1fr;gap:24px}.pdp>.gal{position:static}}
+
+/* ticker */
+.ticker{background:#fff;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:14px 0;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.ticker .track{display:inline-block;animation:tick 40s linear infinite}
+.ticker{padding:16px 0}.ticker .lg{display:inline-flex;align-items:center;justify-content:center;height:64px;width:132px;margin:0 14px;vertical-align:middle}.ticker .lg img{max-height:46px;max-width:108px;object-fit:contain}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.person{border-radius:20px;overflow:hidden;background:var(--soft);position:relative}
+.person .ph{aspect-ratio:4/5;background:linear-gradient(160deg,#D9EEF8,#F3F7F9);display:flex;align-items:flex-end;padding:18px;position:relative}
+.person .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.person .ph .play{position:absolute;top:16px;right:16px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center}
+.person blockquote{position:relative;background:rgba(27,37,41,.82);color:#fff;border-radius:14px;padding:12px 14px;font-size:15px;font-weight:700}
+.person .who{padding:12px 16px;font-size:13px;color:var(--body)}
+@media(max-width:860px){.people{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.people{grid-template-columns:1fr}}
+
+/* why */
+.why{background:var(--soft)}
+.why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;align-items:stretch}
+.wcard{background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.wcard .im{height:200px;background:var(--mist);overflow:hidden;flex:0 0 auto}
+.wcard .im img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.wcard .bd{padding:18px;display:flex;flex-direction:column;flex:1}.wcard .prob{margin-top:auto!important}.wcard p{margin-bottom:12px}
+.wcard .tg{display:inline-block;font-size:12px;font-weight:700;color:var(--blue-2);background:var(--mist);border-radius:999px;padding:4px 10px;margin-bottom:10px}
+.wcard p{font-size:14.5px;color:var(--body);margin-top:6px}
+.wcard .prob{font-size:13.5px;color:var(--ink);font-style:italic;margin-top:10px;border-left:3px solid var(--blue);padding-left:10px}
+@media(max-width:960px){.why .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.why .grid{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{max-width:760px;margin:40px auto 0;position:relative}
+.timeline::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--blue),#BFE7F7)}
+.tl{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:16px 0}
+.tl .dot{width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--blue);position:relative;z-index:1;font-size:13px}
+.tl .when{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-2)}
+.tl .pill{display:inline-block;font-size:12px;color:var(--grey);margin-left:8px}
+.tl h3{margin:4px 0}
+.tl p{color:var(--body);font-size:15px}
+.promise{max-width:760px;margin:30px auto 0;background:var(--ink);color:#fff;border-radius:22px;padding:28px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
+.promise .seal{width:76px;height:76px;border-radius:50%;border:2px solid var(--blue);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;color:var(--blue);line-height:1}
+.promise .seal small{font-size:10px;color:#CFE9F5;font-weight:700;letter-spacing:.08em}
+.promise h3{font-size:20px}
+.promise p{color:#C7D1D4;font-size:14.5px;margin-top:4px}
+.disc{font-size:12px;color:var(--grey);margin-top:18px}
+
+/* survey */
+.survey{background:var(--mist)}
+.svmeta{display:flex;gap:10px;justify-content:flex-start;margin-top:16px;flex-wrap:wrap}
+.svmeta span{background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.stat{background:#fff;border-radius:20px;padding:24px}
+.stat b{display:block;font-size:44px;font-weight:900;color:var(--blue);line-height:1}
+.stat .lbl{font-weight:700;margin:10px 0 4px}
+.stat p{font-size:14px;color:var(--body)}
+@media(max-width:900px){.stats{grid-template-columns:1fr 1fr}}
+
+/* inside */
+.inside .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.icard{border:1px solid var(--line);border-radius:20px;padding:22px}
+.icard .tg{font-size:12px;font-weight:700;color:var(--blue-2);text-transform:uppercase;letter-spacing:.08em}
+.icard h3{margin:8px 0 6px}
+.icard p{font-size:14.5px;color:var(--body)}
+.icard .mean{margin-top:12px;font-size:14px;background:var(--soft);border-radius:12px;padding:10px 12px}
+.icard .mean b{color:var(--ink)}
+.dl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.dl div{background:var(--ink);color:#fff;border-radius:16px;padding:16px;text-align:center}
+.dl b{display:block;font-size:26px;color:var(--blue);font-weight:900}
+.dl span{font-size:12.5px;color:#C7D1D4}
+@media(max-width:900px){.inside .grid{grid-template-columns:1fr}.dl{grid-template-columns:1fr 1fr}}
+
+/* standard */
+.standard{background:var(--ink);color:#fff}
+.standard h2 .soft{color:#7F9399}
+.standard p.sub{color:#C7D1D4}
+.cmp{margin-top:36px;border-radius:20px;overflow:hidden;border:1px solid #2F3D42}
+.cmp .hd,.cmp .r{display:grid;grid-template-columns:1.2fr 1fr 1fr}
+.cmp .hd div{padding:14px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7F9399}
+.cmp .hd div:nth-child(2){color:var(--blue)}
+.cmp .r{border-top:1px solid #2F3D42}
+.cmp .r div{padding:16px 18px;font-size:14.5px}
+.cmp .r div:first-child{font-weight:700}
+.cmp .r div:nth-child(2){background:rgba(0,168,225,.08);color:#fff}
+.cmp .r div:nth-child(2)::before{content:"✓ ";color:var(--blue);font-weight:900}
+.cmp .r div:nth-child(3){color:#90A0A6}
+.badges{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px;max-width:820px}
+.badges button{background:transparent;border:2px solid transparent;border-radius:14px;height:84px;padding:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}.badges button:hover{transform:translateY(-2px)}.badges button img{max-width:100%;max-height:60px;object-fit:contain}
+.badges button.on{border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,168,225,.25)}@media(max-width:700px){.badges{grid-template-columns:repeat(3,1fr)}}
+.badgeinfo{max-width:640px;margin:14px 0 0;text-align:left;font-size:14px;color:#C7D1D4;min-height:44px}
+@media(max-width:700px){.cmp .hd,.cmp .r{grid-template-columns:1fr 1fr 1fr}.cmp .r div{font-size:13px;padding:12px 10px}}
+
+.fbanner{margin-top:28px;border-radius:24px;overflow:hidden;background:var(--soft)}
+.fbanner img{width:100%;display:block}
+.fbanner .cap{padding:16px 22px;font-size:15px;color:var(--body)}.fbanner .cap b{color:var(--ink)}.fbanner .cap .tg{display:inline-block;font-size:12px;font-weight:700;color:var(--blue-2);background:#fff;border-radius:999px;padding:4px 10px;margin-right:10px}
+.zrow{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;margin-top:20px;background:var(--soft);border-radius:24px;overflow:hidden}
+.zrow .ztxt{padding:48px;display:flex;flex-direction:column;justify-content:center}
+.zrow .ztxt h3{font-size:clamp(22px,2.4vw,30px);font-weight:900;margin:10px 0 12px}
+.zrow .ztxt p{color:var(--body);font-size:16px;max-width:440px}
+.zrow .tg{display:inline-block;align-self:flex-start;font-size:12px;font-weight:700;color:var(--blue-2);background:#fff;border-radius:999px;padding:5px 12px}
+.zrow .zimg{aspect-ratio:4/3;overflow:hidden}
+.zrow .zimg img{width:100%;height:100%;object-fit:cover}
+.zrow.rev .ztxt{order:2}
+@media(max-width:820px){.zrow{grid-template-columns:1fr}.zrow.rev .ztxt{order:0}.zrow .ztxt{padding:28px}}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
+.ccard{background:var(--soft);border-radius:24px;overflow:hidden}
+.ccard .cimg{aspect-ratio:16/9;overflow:hidden}.ccard .cimg img{width:100%;height:100%;object-fit:cover}
+.ccard .cbd{padding:24px}.ccard h3{font-size:22px;font-weight:900;margin:10px 0 8px}.ccard p{color:var(--body)}
+.care .tg{display:inline-block;font-size:12px;font-weight:700;color:var(--blue-2);background:#fff;border-radius:999px;padding:5px 12px}
+.steps-h{margin-top:40px;font-size:22px;font-weight:900}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+.st .sim{aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:var(--soft);margin-bottom:12px}.st .sim img{width:100%;height:100%;object-fit:cover}
+.st b{display:block}.st p{font-size:14px;color:var(--body);margin-top:4px}
+@media(max-width:900px){.cgrid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+
+.temp{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;margin-top:20px;background:var(--ink);color:#fff;border-radius:24px;padding:44px}
+.temp .tg{display:inline-block;font-size:12px;font-weight:700;color:var(--blue);background:rgba(0,168,225,.12);border-radius:999px;padding:5px 12px}
+.temp h3{font-size:clamp(30px,3.6vw,46px);font-weight:900;line-height:1.08;margin:14px 0 14px}
+.temp .tleft p{color:#C7D1D4;font-size:16px}
+.temp .tpick{color:var(--blue)!important;font-weight:700;margin-top:22px}
+.ttiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tt{position:relative;background:#24333A;border:1.5px solid #34444B;border-radius:14px;padding:16px 10px 14px;color:#C7D1D4;font-family:inherit;cursor:pointer;transition:.2s;text-align:center}
+.tt:hover{border-color:var(--c)}
+.tt .tdeg{display:block;font-size:20px;font-weight:900}
+.tt .tbar{display:block;height:4px;border-radius:2px;background:var(--c);margin:10px auto 0;width:30%;opacity:.5;transition:.2s}
+.tt.on{border-color:var(--c);color:#fff;background:#2A3B42;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 25%,transparent)}
+.tt.on .tbar{width:60%;opacity:1}
+.tp{display:none}.tp.on{display:block;animation:tfade .35s ease}
+@keyframes tfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tdesc{margin:18px 0 12px;font-size:14.5px;color:#C7D1D4}
+.tcards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tc{background:linear-gradient(150deg,color-mix(in srgb,var(--c) 22%,#1B2529),#1F2D33);border:1px solid #34444B;border-radius:16px;padding:16px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.tci{position:absolute;top:14px;right:14px;width:56px;height:56px}
+.tci svg{width:100%;height:100%}
+.tc b{font-size:16px}.tc span{font-size:13px;color:#AEBBC0}
+.steam{position:absolute;left:14px;top:-6px;display:flex;gap:5px}
+.steam i{width:3px;height:14px;border-radius:2px;background:rgba(255,255,255,.35);animation:steam 2.2s ease-in-out infinite}
+.steam i:nth-child(2){animation-delay:.4s}.steam i:nth-child(3){animation-delay:.8s}
+@keyframes steam{0%{transform:translateY(6px);opacity:0}40%{opacity:.8}100%{transform:translateY(-10px);opacity:0}}
+@media(max-width:900px){.temp{grid-template-columns:1fr;padding:26px}}
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--body);margin-top:10px}
+.faqcta{margin-top:30px;text-align:left}
+.faqcta p{font-weight:700;margin-bottom:14px}
+
+.faqgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}.faqimg{position:sticky;top:90px;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:var(--soft)}.faqimg img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.faqgrid{grid-template-columns:1fr;gap:24px}.faqimg{position:static;aspect-ratio:16/10}}
+/* reviews */
+.rvhead{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:30px;border:1px solid var(--line);border-radius:20px;padding:24px}
+.rvscore b{font-size:56px;font-weight:900;line-height:1}
+.bars div{display:grid;grid-template-columns:40px 1fr 40px;gap:10px;align-items:center;font-size:13px;color:var(--body);margin:4px 0}
+.bars i{height:8px;border-radius:4px;background:var(--line);position:relative;overflow:hidden;display:block}
+.bars i em{position:absolute;inset:0 auto 0 0;background:#F5A623}
+.rvlist{margin-top:20px}
+.rv{border-bottom:1px solid var(--line);padding:20px 0}
+.rv .top{display:flex;justify-content:space-between;font-size:13px;color:var(--grey)}
+.rv .nm{font-weight:700;color:var(--ink)}
+.rv .vb{color:#1CCC92;font-weight:700;margin-left:6px}
+.rv h4{margin:6px 0 4px;font-size:16px}
+.rv p{color:var(--body);font-size:15px}
+@media(max-width:640px){.rvhead{grid-template-columns:1fr;gap:16px}}
+
+/* final */
+.final{background:var(--blue);color:#fff;text-align:left}
+.final h2{color:#fff}
+.final p.sub{color:#E6F7FD}
+.final .btn{background:#fff;color:var(--blue-2);margin-top:22px}
+.final ul{list-style:none;display:flex;gap:22px;justify-content:flex-start;flex-wrap:wrap;margin-top:22px;font-size:14px;font-weight:700}
+.final .disc{color:#D5F1FB}
+
+footer{background:var(--ink);color:#AEBBC0;font-size:13px;padding:48px 0 32px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px}
+footer h5{color:#fff;font-size:14px;margin-bottom:10px}
+footer a{display:block;text-decoration:none;padding:3px 0}
+footer .legal{border-top:1px solid #2F3D42;margin-top:30px;padding-top:18px;font-size:12px}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+
+.sticky{position:fixed;left:50%;bottom:20px;transform:translate(-50%,160%);display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 10px;box-shadow:0 18px 40px -16px rgba(0,40,60,.35);z-index:60;transition:transform .35s ease;width:min(680px,calc(100% - 24px))}
+.sticky.show{transform:translate(-50%,0)}
+.sticky img{width:44px;height:44px;border-radius:50%;object-fit:contain;background:var(--soft)}
+.sticky .sinfo{flex:1;display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.sticky .sinfo span{font-size:13px;color:var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sticky .sname{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sticky .srate{font-size:12.5px!important;color:var(--ink)!important;font-weight:700}.sticky .srate .stars{font-size:12px;letter-spacing:1px;color:#F5A623!important}@media(max-width:560px){.sticky{border-radius:20px}.sticky .sname{white-space:normal;font-size:13px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.sticky .btn{padding:12px 16px}}
+.sticky .btn{padding:12px 24px;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<div class="draft">SAMPLE PDP DRAFT for internal review. Not an official Coway page. Items tagged <span class="sample" style="margin:0">SAMPLE</span> are placeholder content.</div>
+<div class="announce"><span class="dot"></span><b>11.11 EARLY ACCESS</b><span>Extra S$100 off Icon 2</span><code>ICON100</code><span class="sample">SAMPLE</span></div>
+
+<header class="site">
+  <div class="wrap hd">
+    <a href="https://www.coway.sg/home" aria-label="Coway Singapore" class="hlogo"><svg width="105" height="24" viewBox="0 0 105 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#00A8E1" d="M80.4442311,9.24125532 C80.5977686,6.30835932 79.5126343,4.37850673 77.2058675,4.25834088 C74.8498352,4.06526332 73.0183123,6.11952725 72.6032609,9.04503979 C72.1941362,11.9740595 73.5068913,14.3489503 75.7397601,14.5494113 C78.6075224,14.8163235 80.2721728,12.2345111 80.4442311,9.24125532 Z M85.3326137,11.1626169 C85.3326137,12.3971319 85.9215755,14.1220934 86.7496409,15.3566084 C86.985596,15.6890488 87.1793237,16.2555449 87.0206003,16.8441915 C86.8702114,17.4140103 86.404413,17.8743692 85.6793233,18.1885355 C85.3083514,18.3467262 84.9616419,18.4259138 84.6301194,18.4259138 C84.0315268,18.4259138 83.5164631,18.1652776 83.0543689,17.6102258 C82.7700744,17.2558196 82.4776308,16.8441915 82.1375888,16.2555449 C80.9291059,17.4287772 79.0616526,18.7277129 75.7819876,18.7277129 C71.293284,18.7277129 67.6965427,15.2848042 67.6965427,9.70124505 C67.6965427,4.46618535 71.5196083,0.112526529 77.031031,0.112526529 C81.0239325,0.112526529 85.3326137,2.80822879 85.3326137,8.76114565 L85.3326137,11.1626169 Z M92.5467841,20.5329511 L94.7646511,14.8585753 L88.7531666,3.60119423 C87.6187669,1.47992538 87.8686127,0.826858094 88.7150137,0.377389798 C90.1753796,-0.400273419 92.3836158,-0.00341229474 93.3570695,1.82288722 L97.1112377,8.84880581 L99.7000766,2.20811939 C100.459059,0.263869058 102.608585,-0.389198225 104.146367,0.22233708 C105.0387,0.574159081 105.360777,1.20452221 104.47826,3.46570769 L97.3249679,21.7933082 C96.5652443,23.7366356 94.415719,24.3898874 92.8758989,23.7789059 C91.9861592,23.4276376 91.6622302,22.7967207 92.5467841,20.5329511 Z M63.0865834,0.116753562 C64.2232056,0.116753562 65.2548147,0.724412548 65.0355283,1.70253678 L61.7062275,16.3420976 C61.3917441,17.7200363 60.1508498,18.5693191 58.6147338,18.5693191 C57.0110169,18.5693191 55.7401189,17.6674292 55.3917425,16.3420976 L53.5509592,8.59130755 L51.7081386,16.3420976 C51.361429,17.6674292 50.0886789,18.5693191 48.4864436,18.5693191 C46.9484756,18.5693191 45.7062848,17.7200363 45.394024,16.3420976 L42.0660196,1.70253678 C41.8426586,0.724412548 42.8766755,0.116753562 44.0129272,0.116753562 C45.6170145,0.116753562 46.4978643,0.830549825 46.7478952,2.14037612 L48.5999762,12.5069424 C48.6116443,12.5669331 48.7005442,12.570071 48.7138792,12.5110033 L51.1151022,2.60848766 C51.5658987,0.887033316 52.0772583,0.116753562 53.5509592,0.116753562 C55.0207707,0.116753562 55.5337971,0.887033316 55.9825563,2.60848766 L58.3839646,12.5110033 C58.3987812,12.570071 58.4861994,12.5669331 58.4980527,12.5069424 L60.3501338,2.14037612 C60.6036836,0.830549825 61.4828665,0.116753562 63.0865834,0.116753562 Z M29.850323,14.5832829 C32.5130599,14.5832829 34.4716355,12.6619213 34.4716355,9.41855072 C34.4716355,6.17961018 32.5130599,4.25418768 29.850323,4.25418768 C27.1894382,4.25418768 25.2290105,6.17961018 25.2290105,9.41855072 C25.2290105,12.6619213 27.1894382,14.5832829 29.850323,14.5832829 Z M29.850323,0.112434236 C36.092762,0.112434236 39.3522394,4.28150649 39.3522394,9.41855072 C39.3522394,14.5559641 36.092762,18.7276206 29.850323,18.7276206 C23.6099212,18.7276206 20.3485918,14.5559641 20.3485918,9.41855072 C20.3485918,4.28150649 23.6099212,0.112434236 29.850323,0.112434236 Z M15.9036344,13.0882055 C16.3657286,13.3560407 16.9300577,14.1938791 16.7596663,15.1044446 C16.3731369,17.1913804 13.6876195,18.7276944 9.95308334,18.7276944 C2.87905993,18.7276944 -2.4158453e-13,14.2656833 -2.4158453e-13,9.41862455 C-2.4158453e-13,4.28158033 3.26188507,0.112508071 9.50210162,0.112508071 C13.7635548,0.112508071 16.8524555,2.22270173 17.1195256,3.91849854 C17.3656672,5.45056707 15.2746677,7.07012963 13.6876195,5.82823119 C12.4074611,4.82795657 11.2786177,4.25407693 9.50210162,4.25407693 C6.84103162,4.25407693 4.87912221,6.17968402 4.87912221,9.41862455 C4.87912221,13.0575642 7.19514951,14.5600989 9.60637378,14.8775878 C11.3013983,15.1044446 14.1421202,14.734164 15.9036344,13.0882055 Z"/></svg></a>
+    <nav>
+      <a href="https://www.coway.sg/campaign">Campaign</a>
+      <a href="https://www.coway.sg/products-list/water-purifier">Products <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="https://www.coway.sg/heart-service">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="https://www.coway.sg/brand-story">Brand Story <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="https://www.coway.sg/product-support">Support <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+    </nav>
+    <div class="hicons">
+      <a href="#" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B2529" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+      <a href="https://www.coway.sg/login" aria-label="Membership"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B2529" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></a>
+      <a href="https://www.coway.sg/shopping-bag" aria-label="Cart" class="cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B2529" stroke-width="1.8"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cnt">0</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- PDP TOP -->
+<section class="pdp" id="top">
+  <div class="gal">
+    <div class="gal-main"><img class="award" src="https://www.coway.sg/images/brand-story/logo-a-2.png" alt="Korea Brand Power Index No.1"><img id="gmain" src="https://cms.coway.sg/stocks/products_gallery/o0x0/hj/rx/noqchjrx46k/Icon_white_1.webp" alt="Coway Icon 2 in Snow White"></div>
+    <div class="gal-thumbs" id="gthumbs">
+      <img class="on" src="https://cms.coway.sg/stocks/products_gallery/o0x0/hj/rx/noqchjrx46k/Icon_white_1.webp" alt="">
+      <img src="https://cms.coway.sg/stocks/products_gallery/o0x0/gb/y7/ilqxgby7cob/Icon_white_2.webp" alt="">
+      <img src="https://cms.coway.sg/stocks/products_features/o0x0/eg/vo/9almegvozlq/feature_mb.webp" alt="">
+      <img src="https://cms.coway.sg/stocks/products_features/o0x0/rd/ex/xqthrdexy25/banner7_1.webp" alt="">
+      <img src="https://cms.coway.sg/stocks/products/o0x0/cm/xt/ef2gcmxtk4j/Icon_Black_1.webp" alt="">
+    </div>
+  </div>
+
+  <div>
+    <div class="rating"><span class="stars">★★★★★</span><b>Excellent</b><span>| 312 reviews · 4.8 out of 5</span><span class="sample">SAMPLE</span></div>
+    <h1>Icon 2 | Instant Hot &amp; Cold Water Purifier</h1>
+    <div class="meta"><span>From S$472/mth · 4 months 0%</span><span>2 years of filters included</span></div>
+    <p class="oneliner">Backed by the world's largest R&amp;D centre and over 1 million reliability tests.</p>
+    <ul class="ticks">
+      <li>Fresh, filtered water whenever you want it</li>
+      <li>The right temperature for every drink, in one touch</li>
+      <li>Fewer impurities in every glass your family drinks</li>
+      <li>Drink more water, feel more energised and focused</li>
+    </ul>
+    <p class="small">Installed by Coway professionals. 2 years of filters and a 1-year warranty included. 0% instalments. Trade-in available.</p>
+    <p class="sold">500,000+ Icon units sold in Korea.</p>
+
+    <div class="promo"><span>11.11 Early Access · Extra S$100 off</span><code>ICON100</code></div>
+
+    <div class="plans-title" id="plans">Choose your plan</div>
+    <div class="plan on" data-price="2038" data-list="2288" data-name="Heart Service">
+      <span class="save">Most popular · Save S$250</span>
+      <div class="row"><span class="name">2-Year Heart Service</span><span class="price"><s>S$2,288</s>S$2,038</span></div>
+      <div class="desc">A Coway technician comes to you</div>
+      <div class="more">
+        <div>Technician checks, sanitises and changes filters on schedule</div>
+        <div>Just <b class="mth">S$509.50/mth</b> over 4 months, 0% interest</div>
+        <div>1-year warranty included</div>
+      </div>
+    </div>
+    <div class="plan" data-price="1888" data-list="2138" data-name="Self-Service">
+      <span class="save">Save S$250</span>
+      <div class="row"><span class="name">2-Year Self-Service</span><span class="price"><s>S$2,138</s>S$1,888</span></div>
+      <div class="desc">Filter kits couriered to your door</div>
+      <div class="more">
+        <div>Email reminder one week before each kit arrives</div>
+        <div>Just <b class="mth">S$472/mth</b> over 4 months, 0% interest</div>
+        <div>Step-by-step video, 5-minute swap</div>
+      </div>
+    </div>
+    <div class="plan" data-price="3288" data-list="4176" data-name="Home Bundle">
+      <span class="save">Save S$888</span>
+      <div class="row"><span class="name">Home Bundle: Icon 2 + Noble air purifier</span><span class="price"><s>S$4,176</s>S$3,288</span></div>
+      <div class="desc">Clean water and clean air, one installation visit <span class="sample">SAMPLE</span></div>
+      <div class="more">
+        <div>Heart Service on both units</div>
+        <div>Just <b class="mth">S$822/mth</b> for both over 4 months, 0% interest</div>
+        <div>One technician, one schedule</div>
+      </div>
+    </div>
+    <label class="plan" style="display:flex;gap:10px;align-items:center" id="tradeRow"><input type="checkbox" id="trade" style="accent-color:#00A8E1"> <span><b>Trade in your old dispenser</b> · save another 10%</span></label>
+
+    <p class="savingline">You're saving <b id="saving">S$250</b> on this order</p>
+    <a class="btn block" href="https://www.coway.sg/products/chp-7211n-white" id="buy">Get my Icon 2 →</a>
+    <div class="assure"><span>✓ Free installation</span><span>✓ 0% instalments</span><span>✓ Free delivery islandwide</span></div>
+
+    <div class="quote">“I didn't realise how much time I spent waiting for the kettle until I stopped. Formula at 45°C at 3am, in one touch, changed our nights.”<small>Rachel Tan · first-time mum, Punggol BTO · 6 months with Icon 2 <span class="sample">SAMPLE</span></small></div>
+
+    <div class="trio">
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A8E1" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>1-year warranty</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A8E1" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Installed by Coway professionals</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A8E1" stroke-width="2"><path d="M12 3c2 3 5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 3-6 5-9z"/></svg>500,000+ sold in Korea</div>
+    </div>
+    <div class="pay"><span><img src="https://www.coway.sg/images/layout/visa.svg" alt="Visa"></span><span><img src="https://www.coway.sg/images/layout/mastercard.svg" alt="Mastercard"></span><span><img src="https://www.coway.sg/images/bank/pay_now.svg" alt="PayNow"></span><span><img src="https://www.coway.sg/images/bank/atome.svg" alt="Atome"></span><span><img src="https://www.coway.sg/images/bank/grab_pay.svg" alt="GrabPay"></span><span><img src="https://www.coway.sg/images/bank/shopee_pay.svg" alt="ShopeePay"></span><span><img src="https://www.coway.sg/images/bank/alipay.svg" alt="Alipay"></span><span><img src="https://www.coway.sg/images/bank/wechat_pay.svg" alt="WeChat Pay"></span></div>
+
+    <details class="acc"><summary>What makes Icon 2 different?</summary><div class="in"><p>Most dispensers keep a tank of water hot all day. Icon 2 heats only what you pour, the moment you pour it, then filters, chills and measures it too. It is one compact unit doing the job of a kettle, a jug filter and fridge bottles.</p></div></details>
+    <details class="acc"><summary>What changes at home</summary><div class="in"><p>No more waiting for the boil. No more fridge shelf lost to water bottles. No more guessing how much to pour for formula, tea or rice. Most families tell us the kettle goes into storage within a week. <span class="sample">SAMPLE</span></p></div></details>
+    <details class="acc"><summary>How it works</summary><div class="in"><p>Tap water flows through two filters, a Nano-Trap filter and a Plus Inno-Sense carbon filter, then is heated on demand or drawn from the cold tank, and poured in the amount you choose.</p></div></details>
+    <details class="acc"><summary>What it filters</summary><div class="in"><p>Coway states its NanoTrap filter removes 98 types of harmful substances, including heavy metals such as lead and mercury, bacteria and viruses, chemical pollutants and environmental hormones.</p></div></details>
+    <details class="acc"><summary>Service, filters &amp; warranty</summary><div class="in"><p>Every plan includes 2 years of filters and a 1-year warranty. Choose Heart Service for technician visits, or Self-Service for filter kits delivered to your door.</p></div></details>
+    <details class="acc"><summary>How to use it</summary><div class="in"><p>Tap the temperature, tap the volume, place your cup. That's it. Set your favourite amount once with My Capacity.</p></div></details>
+    <details class="acc"><summary>Who is Icon 2 for?</summary><div class="in"><p>Busy households, new parents, tea and coffee lovers, and anyone in an HDB or condo who wants filtered hot and cold water without a bulky machine on the counter.</p></div></details>
+  </div>
+</section>
+
+<div class="ticker"><div class="track"><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-2.png" alt="Korea Brand Power Index No.1"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-4.png" alt="Red Dot Design Award"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-3.png" alt="iF Design Award"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-1.png" alt="CES Innovation Awards"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-5.png" alt="IDEA International Design Excellence Awards"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-6.png" alt="Good Design Award"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-1.png" alt="Water Quality Association"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-2.png" alt="WQA Recognized Testing Laboratory"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-3.png" alt="KOLAS"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-6.png" alt="TÜV SÜD ISO 9001"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-5.png" alt="UL"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-2.png" alt="Korea Brand Power Index No.1"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-4.png" alt="Red Dot Design Award"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-3.png" alt="iF Design Award"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-1.png" alt="CES Innovation Awards"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-5.png" alt="IDEA International Design Excellence Awards"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-a-6.png" alt="Good Design Award"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-1.png" alt="Water Quality Association"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-2.png" alt="WQA Recognized Testing Laboratory"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-3.png" alt="KOLAS"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-6.png" alt="TÜV SÜD ISO 9001"></span><span class="lg"><img src="https://www.coway.sg/images/brand-story/logo-b-5.png" alt="UL"></span></div></div>
+
+<!-- REAL PEOPLE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="kicker">Real homes. Real routines.</div>
+    <h2>Unscripted, from the people<br><span class="soft">who pour from it daily</span></h2>
+    <p class="sub">Founders, clinicians, physiotherapists and athletes, unscripted. Hear what changed for them. <span class="sample">SAMPLE</span></p>
+    <div class="people">
+      <div class="person"><div class="ph"><img src="https://cms.coway.sg/stocks/products_features/o0x0/rd/ex/xqthrdexy25/banner7_1.webp" alt=""><span class="play">▶</span><blockquote>“Long clinic days, and I still finish my water bottle. It just tastes cleaner.”</blockquote></div><div class="who"><b>Dr Rachel Tan</b> · Family physician</div></div>
+      <div class="person"><div class="ph"><img src="https://cms.coway.sg/stocks/products_features/o0x0/bi/lx/z5nabilxnuf/SG-Website-Icon-FA-4-04-2.gif" alt=""><span class="play">▶</span><blockquote>“Cold water on tap after every run. I drink far more than I used to.”</blockquote></div><div class="who"><b>Marcus Lee</b> · Marathoner</div></div>
+      <div class="person"><div class="ph"><img src="https://cms.coway.sg/stocks/products_features/o0x0/eg/vo/9almegvozlq/feature_mb.webp" alt=""><span class="play">▶</span><blockquote>“I tell my patients to hydrate. Now my own family actually does.”</blockquote></div><div class="who"><b>Priya Nair</b> · Physiotherapist</div></div>
+      <div class="person"><div class="ph"><img src="https://cms.coway.sg/stocks/products_features/o0x0/u1/5y/qzttu15y9ce/banner8_1.webp" alt=""><span class="play">▶</span><blockquote>“Back-to-back calls, and coffee at 85°C in one touch. Zero downtime.”</blockquote></div><div class="who"><b>Jason Lim</b> · Founder, SaaS start-up</div></div>
+      <div class="person"><div class="ph"><img src="https://cms.coway.sg/stocks/products_features/o0x0/ie/mw/aqgniemwdeg/Regular_Heart_Service_mobile.webp" alt=""><span class="play">▶</span><blockquote>“Clean water is the simplest recovery tool there is. This makes it effortless.”</blockquote></div><div class="who"><b>Farah Hassan</b> · National track athlete</div></div>
+      <div class="person"><div class="ph"><img src="https://cms.coway.sg/stocks/products_features/o0x0/pd/yv/rhuopdyvtal/05_banner.webp" alt=""><span class="play">▶</span><blockquote>“Peace of mind on what’s in our water. That’s what sold me.”</blockquote></div><div class="who"><b>Daniel Goh</b> · Co-founder, F&amp;B group</div></div>
+    </div>
+    <p style="margin-top:30px"><a class="btn" href="#plans">Choose your plan</a></p>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="kicker">Why it works</div>
+    <h2>Four ways water quality benefits you</h2>
+    <p class="sub">Cleaner, fresher water is water you actually want to drink. Here's how better water quality supports your health and your family's, every day.</p>
+    <div class="grid">
+      <div class="wcard"><div class="im"><img src="https://cms.coway.sg/stocks/products_features/o0x0/bo/ul/e79zboul5mh/12_banner.webp" alt="Award-winning taste"></div><div class="bd"><span class="tg">Fresher taste</span><h3>Water you'll want to drink more of</h3><p>Filtered water tastes cleaner, without the chlorine note, so the whole family naturally drinks more. Staying hydrated helps your energy, focus and digestion through the day.</p><div class="prob">Water that tastes "off" is water nobody finishes.</div></div></div>
+      <div class="wcard"><div class="im"><img src="https://cms.coway.sg/stocks/products_features/o0x0/ju/wm/p72bjuwmrtu/banner12.webp" alt="Filtered water"></div><div class="bd"><span class="tg">Fewer contaminants</span><h3>Less of what you don't want in your glass</h3><p>NanoTrap filtration targets heavy metals such as lead and mercury, bacteria, viruses and chemical pollutants*, so less of them reach the water your family drinks.</p><div class="prob">PUB water leaves the plant clean. Old pipes in your block are another story.</div></div></div>
+      <div class="wcard"><div class="im"><img src="https://cms.coway.sg/stocks/products_features/o0x0/u1/5y/qzttu15y9ce/banner8_1.webp" alt="Cold water on tap"></div><div class="bd"><span class="tg">Better hydration</span><h3>Stay hydrated in Singapore's heat</h3><p>Chilled water one touch away makes it easy to swap sugary drinks for plain water, for the kids after school and for you after a workout.</p><div class="prob">When cold water runs out, the fridge soft drink wins.</div></div></div>
+      <div class="wcard"><div class="im"><img src="https://cms.coway.sg/stocks/products_features/o0x0/43/1b/j60w431bbrc/banner11.webp" alt="UV self-sterilising faucet"></div><div class="bd"><span class="tg">Hygiene to the last drop</span><h3>Clean right up to your cup</h3><p>UV light sterilises the faucet every 6 hours, keeping germs away from the very last point your water touches before you drink it.</p><div class="prob">Clean water through a dirty spout isn't clean water.</div></div></div>
+    </div>
+    <p class="disc">*Coway's stated NanoTrap filter performance. General wellness information only, not medical advice.</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec feats" id="features">
+  <div class="wrap">
+    <div class="kicker">What Icon 2 does for you</div>
+    <h2>Small machine. Big difference.<br><span class="soft">Here's what you get every day.</span></h2>
+    <p class="sub">Every feature exists to save you time, space or worry. Here's how.</p>
+    <div class="fbanner"><img src="https://cms.coway.sg/stocks/products_features/o0x0/gg/8l/eqptgg8l0du/vs-desktop.webp" alt="Five steps with a kettle versus one touch with Icon 2"></div>
+    <div class="temp" id="temps">
+      <div class="tleft">
+        <span class="tg">Wide temperature range</span>
+        <h3>One tap.<br>Six temperatures.</h3>
+        <p>From ice-cold to 98°C, Icon 2 pours the right temperature for whatever you're making. No kettle, no thermometer, no waiting.</p>
+        <p class="tpick">Choose a temperature to see what you can make:</p>
+      </div>
+      <div class="tright">
+        <div class="ttiles"><button class="tt on" data-t="cold" style="--c:#4FB6E8"><span class="tdeg">Cold</span><span class="tbar"></span></button><button class="tt" data-t="amb" style="--c:#7FC8A9"><span class="tdeg">Ambient</span><span class="tbar"></span></button><button class="tt" data-t="45" style="--c:#F5B85A"><span class="tdeg">45°C</span><span class="tbar"></span></button><button class="tt" data-t="70" style="--c:#F09A4A"><span class="tdeg">70°C</span><span class="tbar"></span></button><button class="tt" data-t="85" style="--c:#E5733A"><span class="tdeg">85°C</span><span class="tbar"></span></button><button class="tt" data-t="98" style="--c:#D9483B"><span class="tdeg">98°C</span><span class="tbar"></span></button></div>
+        <div class="tpanels"><div class="tp on" data-t="cold"><p class="tdesc"><b style="color:#4FB6E8">Cold</b> · Chilled water on tap for hot Singapore days.</p><div class="tcards"><div class="tc" style="--c:#4FB6E8"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#4FB6E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 17a2 2 0 0 1-2 1.8h-5a2 2 0 0 1-2-1.8z"/><rect x="9" y="10" width="3" height="3" rx=".5"/><rect x="12.5" y="13.5" width="3" height="3" rx=".5"/></svg></div><b>Iced water</b><span>After a run or a long day out</span></div><div class="tc" style="--c:#4FB6E8"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#4FB6E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg></div><b>Cold-brew tea</b><span>Steep overnight in the fridge</span></div><div class="tc" style="--c:#4FB6E8"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#4FB6E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 17a2 2 0 0 1-2 1.8h-5a2 2 0 0 1-2-1.8z"/><path d="M7 9h10"/></svg></div><b>Fruit infusion</b><span>Lemon, mint or cucumber</span></div><div class="tc" style="--c:#4FB6E8"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#4FB6E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="15" rx="3"/><path d="M10 6V3h4v3"/><path d="M8 12h8"/></svg></div><b>School bottles</b><span>Filled cold every morning</span></div></div></div><div class="tp" data-t="amb"><p class="tdesc"><b style="color:#7FC8A9">Ambient</b> · Room-temperature water, straight through the filters.</p><div class="tcards"><div class="tc" style="--c:#7FC8A9"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#7FC8A9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 17a2 2 0 0 1-2 1.8h-5a2 2 0 0 1-2-1.8z"/><path d="M7 9h10"/></svg></div><b>Plain drinking water</b><span>Easy on the stomach</span></div><div class="tc" style="--c:#7FC8A9"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#7FC8A9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-35 12 12)"/><path d="M9.5 8.5l5 7"/></svg></div><b>Taking medicine</b><span>No need to wait for it to cool</span></div><div class="tc" style="--c:#7FC8A9"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#7FC8A9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="15" rx="3"/><path d="M10 6V3h4v3"/><path d="M8 12h8"/></svg></div><b>Kids' drinks</b><span>Not too cold, not too hot</span></div><div class="tc" style="--c:#7FC8A9"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#7FC8A9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 10h20M9 6h6"/><path d="M10 3c0 1 1 1 1 2M14 3c0 1 1 1 1 2"/></svg></div><b>Washing rice</b><span>Clean, filtered water for cooking</span></div></div></div><div class="tp" data-t="45"><p class="tdesc"><b style="color:#F5B85A">45°C</b> · Ideal for mixing baby formula: soothing warmth that retains nutrients.</p><div class="tcards"><div class="tc" style="--c:#F5B85A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B85A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 12h8M8 16h8"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Baby formula</b><span>Ready at 3am in one touch</span></div><div class="tc" style="--c:#F5B85A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B85A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Warm morning water</b><span>Gentle start to the day</span></div><div class="tc" style="--c:#F5B85A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B85A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Honey lemon</b><span>Warm, never scalding</span></div><div class="tc" style="--c:#F5B85A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B85A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 17a2 2 0 0 1-2 1.8h-5a2 2 0 0 1-2-1.8z"/><path d="M7 9h10"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Water for elderly parents</b><span>Comfortable to sip</span></div></div></div><div class="tp" data-t="70"><p class="tdesc"><b style="color:#F09A4A">70°C</b> · Perfect for extracting optimal flavour from tea without overcooked leaves.</p><div class="tcards"><div class="tc" style="--c:#F09A4A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F09A4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Green tea</b><span>Sweet, never bitter</span></div><div class="tc" style="--c:#F09A4A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F09A4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Matcha</b><span>Smooth and frothy</span></div><div class="tc" style="--c:#F09A4A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F09A4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>White tea</b><span>Delicate flavour kept</span></div><div class="tc" style="--c:#F09A4A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#F09A4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Chrysanthemum tea</b><span>Floral and light</span></div></div></div><div class="tp" data-t="85"><p class="tdesc"><b style="color:#E5733A">85°C</b> · Ideal for extracting optimal flavour from freshly ground coffee.</p><div class="tcards"><div class="tc" style="--c:#E5733A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#E5733A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Pour-over coffee</b><span>Full flavour, no burnt taste</span></div><div class="tc" style="--c:#E5733A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#E5733A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Kopi & teh</b><span>Your kopitiam favourite at home</span></div><div class="tc" style="--c:#E5733A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#E5733A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Oolong tea</b><span>Rich, rounded taste</span></div><div class="tc" style="--c:#E5733A"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#E5733A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Hot chocolate</b><span>Creamy and warm</span></div></div></div><div class="tp" data-t="98"><p class="tdesc"><b style="color:#D9483B">98°C</b> · The perfect temperature for just-right poached eggs.</p><div class="tcards"><div class="tc" style="--c:#D9483B"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#D9483B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 0 6 5 6 9a6 6 0 0 1-12 0c0-4 2.5-9 6-9z"/><circle cx="12" cy="14" r="2.5"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Poached eggs</b><span>Just-right, every time</span></div><div class="tc" style="--c:#D9483B"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#D9483B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M8 7c0-2 2-2 2-4M13 7c0-2 2-2 2-4"/><path d="M6 21h12"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Instant noodles</b><span>Ready in minutes</span></div><div class="tc" style="--c:#D9483B"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#D9483B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Black tea</b><span>Full-bodied brew</span></div><div class="tc" style="--c:#D9483B"><div class="tci"><svg viewBox="0 0 24 24" fill="none" stroke="#D9483B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 10h20M9 6h6"/><path d="M10 3c0 1 1 1 1 2M14 3c0 1 1 1 1 2"/></svg><span class=steam><i></i><i></i><i></i></span></div><b>Soups & blanching</b><span>Speeds up your cooking</span></div></div></div></div>
+      </div>
+    </div>
+    <div class="fbanner"><picture><source media="(min-width:768px)" srcset="https://cms.coway.sg/stocks/products_features/o0x0/yz/fj/n57wyzfjfcm/5-Volume-Options_desktop.gif"><img src="https://cms.coway.sg/stocks/products_features/o0x0/gr/gl/eix1grgl75m/5-Volume-Options_mobile.gif" alt="Five customisable water extraction levels"></picture></div>
+    <div class="zrow"><div class="ztxt"><span class="tg">Dust filter</span><h3>Cold water that stays fresh</h3><p>A protective filter keeps dust, insects and fine particles out of the cooling system, so your chilled water stays clean.</p></div><div class="zimg"><img src="https://cms.coway.sg/stocks/products_features/o0x0/ln/0x/huonln0x8zo/banner9_1.webp" alt="Cold water that stays fresh"></div></div>
+    <div class="fbanner"><img src="https://cms.coway.sg/stocks/products_features/o0x0/k7/5o/ngvmk75opmu/NanoTrap_r1-02-10667x6000_3mb.webp" alt="NanoTrap filter technology"></div>
+    <div class="zrow rev"><div class="ztxt"><span class="tg">100% Tritan faucet</span><h3>Safe enough for your newborn</h3><p>The spout is made from Tritan, a material free from harmful substances. It resists heat, knocks, odours and stains, so it stays like new.</p></div><div class="zimg"><img src="https://cms.coway.sg/stocks/products_features/o0x0/pd/yv/rhuopdyvtal/05_banner.webp" alt="Safe enough for your newborn"></div></div>
+    <div class="zrow"><div class="ztxt"><span class="tg">FDA-certified materials</span><h3>Safe where it matters most</h3><p>Parts that touch your water use FDA-certified materials and meet Singapore's Environmental Public Health Regulations 2019.</p></div><div class="zimg"><img src="https://cms.coway.sg/stocks/products_features/o0x0/cz/pt/ehawczpt20b/13_banner.webp" alt="Safe where it matters most"></div></div>
+    <p style="margin-top:34px"><a class="btn" href="#plans">Choose your plan</a></p>
+  </div>
+</section>
+
+<!-- SURVEY -->
+<section class="sec survey">
+  <div class="wrap">
+    <div class="kicker">The consumer survey</div>
+    <h2>Loved at home.<br><span class="soft">Independently surveyed.</span></h2>
+    <p class="sub">We asked daily users what actually changed. Here's what they told us. <span class="sample">SAMPLE DATA</span></p>
+    <div class="svmeta"><span>300 owners</span><span>90+ days of daily use</span></div>
+    <div class="stats">
+      <div class="stat"><b class="count" data-to="94">0%</b><div class="lbl">More energy</div><p>said they feel more focused after drinking filtered water over time.</p></div>
+      <div class="stat"><b class="count" data-to="89">0%</b><div class="lbl">Daily convenience</div><p>said it saves them time getting ready for work or sending the kids to school.</p></div>
+      <div class="stat"><b class="count" data-to="91">0%</b><div class="lbl">Better taste</div><p>said their water tastes cleaner than before.</p></div>
+      <div class="stat"><b class="count" data-to="96">0%</b><div class="lbl">Caters to family needs</div><p>said they adjust the temperature to suit both seniors and kids.</p></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn line" href="#care">See how it's maintained</a> &nbsp; <a class="btn" href="#plans">Choose your plan</a></p>
+    <p class="disc">*Sample figures for layout only. Replace with a real post-installation survey before publishing.</p>
+  </div>
+</section>
+
+<!-- CARE -->
+<section class="sec care" id="care">
+  <div class="wrap">
+    <div class="kicker">Filter replacement &amp; cleaning</div>
+    <h2>Clean water stays clean.<br><span class="soft">Because looking after it is easy.</span></h2>
+    <p class="sub">Choose who looks after your Icon 2, then forget about it. Either way, 2 years of filters are included.</p>
+    <div class="cgrid">
+      <div class="ccard"><div class="cimg"><img src="https://cms.coway.sg/stocks/products_features/o0x0/5b/t1/9brn5bt1xya/Regular_Heart_Service_desktop.webp" alt="Coway Heart Service professional"></div><div class="cbd"><span class="tg">Heart Service</span><h3>We come to you</h3><p>A Coway professional visits on schedule to check your Icon 2, clean it inside and out, flush the system and fit new filters. You just open the door.</p></div></div>
+      <div class="ccard"><div class="cimg"><img src="https://cms.coway.sg/stocks/products_features/o0x0/p3/jh/gntvp3jhizv/Easy_Self_Service_desktop.webp" alt="Coway Self-Service filter delivery"></div><div class="cbd"><span class="tg">Self-Service</span><h3>Filters come to you</h3><p>New filters arrive at your door before you need them, with an email reminder one week ahead and a short video showing you how.</p></div></div>
+    </div>
+    <div class="fbanner"><img src="https://cms.coway.sg/stocks/products_features/o0x0/hq/jz/l7yfhqjzqr9/filter_desktop.webp" alt="Filter replacement and cleaning steps"><p class="cap">Every Heart Service visit: product check, filter flush, exterior clean, new filter fitted, service completed.</p></div>
+    <h3 class="steps-h">Doing it yourself? It takes seconds.</h3>
+    <div class="steps">
+      <div class="st"><div class="sim"><img src="https://cms.coway.sg/stocks/products_features/o0x0/a1/p7/kumqa1p7qri/banner16.webp" alt=""></div><b>1. Swap the filter</b><p>Lift and swap the faucet and filter in a single step.</p></div>
+      <div class="st"><div class="sim"><img src="https://cms.coway.sg/stocks/products_features/o0x0/hq/6e/wgvlhq6eupy/banner17.webp" alt=""></div><b>2. Change the faucet</b><p>Lift the old faucet cartridge out and click the new one in.</p></div>
+      <div class="st"><div class="sim"><img src="https://cms.coway.sg/stocks/products_features/o0x0/ju/wm/p72bjuwmrtu/banner12.webp" alt=""></div><b>3. Rinse to clean</b><p>Detach the faucet cartridge and rinse it under running water.</p></div>
+      <div class="st"><div class="sim"><img src="https://cms.coway.sg/stocks/products_features/o0x0/or/cj/4huborcj52e/banner13_1.webp" alt=""></div><b>4. Free yearly faucet</b><p>Coway replaces your faucet every year at no cost.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STANDARD -->
+<section class="sec standard" id="standard">
+  <div class="wrap">
+    <div class="kicker">The Coway standard</div>
+    <h2>Built to our standard,<br><span class="soft">not the dispenser aisle's.</span></h2>
+    <p class="sub">Seven things we won't compromise on, and where a typical dispenser cuts corners.</p>
+    <div class="cmp">
+      <div class="hd"><div></div><div>Coway Icon 2</div><div>Typical dispenser</div></div>
+      <div class="r"><div>Hot water</div><div>Heated on demand, 4 settings</div><div>Tank kept hot all day</div></div>
+      <div class="r"><div>Filtration</div><div>Two-stage, 98 substances*</div><div>Basic carbon, if any</div></div>
+      <div class="r"><div>Volume control</div><div>5 options incl. My Capacity</div><div>Hold the button and guess</div></div>
+      <div class="r"><div>Footprint</div><div>180mm wide</div><div>Wide tank units</div></div>
+      <div class="r"><div>Installation</div><div>By Coway professionals</div><div>DIY or third party</div></div>
+      <div class="r"><div>Filter changes</div><div>Done for you, or delivered</div><div>Up to you to remember</div></div>
+      <div class="r"><div>Warranty</div><div>1 year, repairs handled by Coway</div><div>Varies by brand</div></div>
+    </div>
+    <p class="small" style="margin-top:28px;color:#90A0A6">Tap any badge to see what it means</p>
+    <div class="badges" id="badges">
+      <button data-i="Ranked No.1 for water purifiers in the Korea Brand Power Index (KMAC) for 20 consecutive years." aria-label="Korea Brand Power Index No.1"><img src="https://www.coway.sg/images/brand-story/logo-a-2.png" alt="Korea Brand Power Index No.1"></button>
+      <button data-i="Coway has won the Red Dot Design Award for 16 consecutive years." aria-label="Red Dot Design Award"><img src="https://www.coway.sg/images/brand-story/logo-a-4.png" alt="Red Dot Design Award"></button>
+      <button data-i="Coway won 8 iF Design Awards in 2022, organised by International Forum Design GmbH." aria-label="iF Design Award"><img src="https://www.coway.sg/images/brand-story/logo-a-3.png" alt="iF Design Award"></button>
+      <button data-i="Coway has received the CES Innovation Award for 6 consecutive years (Consumer Technology Association)." aria-label="CES Innovation Awards"><img src="https://www.coway.sg/images/brand-story/logo-a-1.png" alt="CES Innovation Awards"></button>
+      <button data-i="Coway has won the IDEA Design Award (Industrial Designers Society of America) for 8 consecutive years." aria-label="IDEA Design Award"><img src="https://www.coway.sg/images/brand-story/logo-a-5.png" alt="IDEA Design Award"></button>
+      <button data-i="Coway has won 4 Good Design Awards from the Japan Institute of Design Promotion." aria-label="Good Design Award"><img src="https://www.coway.sg/images/brand-story/logo-a-6.png" alt="Good Design Award"></button>
+      <button data-i="Coway's R&amp;D centre is certified by the Water Quality Association (USA) as a Recognized Testing Laboratory for efficiency and safety tests." aria-label="WQA Recognized Testing Laboratory"><img src="https://www.coway.sg/images/brand-story/logo-b-2.png" alt="WQA Recognized Testing Laboratory"></button>
+      <button data-i="Accredited under the Korea Laboratory Accreditation Scheme (KOLAS)." aria-label="KOLAS"><img src="https://www.coway.sg/images/brand-story/logo-b-3.png" alt="KOLAS"></button>
+      <button data-i="Recognised by TÜV as an official RoHS testing institute." aria-label="TÜV SÜD"><img src="https://www.coway.sg/images/brand-story/logo-b-6.png" alt="TÜV SÜD"></button>
+      <button data-i="Part of UL's Witness Test Data Program." aria-label="UL"><img src="https://www.coway.sg/images/brand-story/logo-b-5.png" alt="UL"></button>
+    </div>
+    <p class="badgeinfo" id="binfo">&nbsp;</p>
+    <p class="disc">*Coway's stated NanoTrap filter performance.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="faq">
+  <div class="wrap faqgrid">
+    <div class="faqimg"><img src="https://cms.coway.sg/stocks/products_features/o0x0/tl/vj/bgtztlvj824/banner1_2.webp" alt="Coway Icon 2 in a kitchen"></div>
+    <div>
+    <div class="kicker">Questions, answered</div>
+    <h2>Still have questions?</h2>
+    <details><summary>Will it fit my HDB kitchen?</summary><p>Very likely. Icon 2 is 180mm wide, 340mm deep and 385mm tall. It needs a nearby power point and access to your water line, which our technician checks at installation.</p></details>
+    <details><summary>Is the hot water really instant?</summary><p>Yes. Icon 2 heats water as it pours instead of keeping a tank hot, so you get 45, 70, 85 or 98°C in seconds.</p></details>
+    <details><summary>Heart Service or Self-Service: which should I pick?</summary><p>Pick Heart Service if you'd rather never think about maintenance: a technician visits to check, sanitise and change filters. Pick Self-Service if you're happy to do a quick filter swap: kits arrive with an email reminder a week before.</p></details>
+    <details><summary>Is it safe for baby formula?</summary><p>The 45°C setting is designed for mixing formula. Always follow your formula's preparation instructions and your doctor's advice.</p></details>
+    <details><summary>How long does installation take?</summary><p>Usually under an hour. We call to book a slot that suits you. <span class="sample">SAMPLE</span></p></details>
+    <details><summary>What happens after 2 years?</summary><p>You can renew your filters and service plan. We'll remind you before your plan ends. <span class="sample">SAMPLE</span></p></details>
+    <details><summary>Can I trade in my old dispenser?</summary><p>Yes. Trade in any brand and save 10%. We take the old unit away at installation.</p></details>
+    <details><summary>Can I pay in instalments?</summary><p>Yes, 0% instalments with Atome or Grab PayLater. We also accept cards, PayNow, ShopeePay, Alipay and WeChat Pay.</p></details>
+    <details><summary>Why Coway?</summary><p>Coway is Korea's No.1 water purifier brand, ranked first in the Korea Brand Power Index for 20 consecutive years. Since 1989, it has focused on one thing: cleaner, safer water and air at home.</p><p style="margin-top:8px"><b>World's largest R&amp;D centre.</b> Coway set up its first R&amp;D centre in 1993. Today 451 researchers work on its water technology, and the lab is certified by the Water Quality Association (USA) as a Recognized Testing Laboratory.</p><p style="margin-top:8px"><b>Tested over 1 million times.</b> Coway products go through more than 1 million reliability tests before they reach your home, and are certified by bodies including KOLAS, UL and TÜV.</p><p style="margin-top:8px"><b>Made by Coway, end to end.</b> From design to testing to production, Coway makes its own products. Its Yugu factory in Korea became the world's largest indoor water purifier plant, producing 1.44 million units a year by 1997.</p><p style="margin-top:8px"><b>Trusted worldwide.</b> More than 6 million customers, plus 16 straight years of Red Dot design awards.</p></details>
+    <details><summary>What does the warranty cover?</summary><p>Defects in materials or workmanship during normal use, for 1 year from installation.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="reviews" style="padding-top:20px">
+  <div class="narrow">
+    <h2>Customer reviews <span class="sample">SAMPLE</span></h2>
+    <div class="rvhead">
+      <div class="rvscore"><b>4.8</b><div class="stars">★★★★★</div><div class="small">Based on 312 reviews</div></div>
+      <div class="bars">
+        <div><span>5 ★</span><i><em style="width:84%"></em></i><span>262</span></div>
+        <div><span>4 ★</span><i><em style="width:12%"></em></i><span>37</span></div>
+        <div><span>3 ★</span><i><em style="width:3%"></em></i><span>9</span></div>
+        <div><span>2 ★</span><i><em style="width:1%"></em></i><span>3</span></div>
+        <div><span>1 ★</span><i><em style="width:.5%"></em></i><span>1</span></div>
+      </div>
+    </div>
+    <div class="rvlist">
+      <div class="rv"><div class="top"><span><span class="nm">Melissa Chua</span><span class="vb">✓ Verified buyer</span></span><span>14/10/2026</span></div><div class="stars">★★★★★</div><h4>Kettle is officially retired</h4><p>Didn't realise how often I was boiling and reboiling water until I stopped. Morning coffee is literally one touch now.</p></div>
+      <div class="rv"><div class="top"><span><span class="nm">Daniel Ong</span><span class="vb">✓ Verified buyer</span></span><span>12/10/2026</span></div><div class="stars">★★★★★</div><h4>Small enough for our BTO</h4><p>We measured our counter twice before buying. It fits beside the sink with room to spare and doesn't look like an office dispenser.</p></div>
+      <div class="rv"><div class="top"><span><span class="nm">Siti Rahmah</span><span class="vb">✓ Verified buyer</span></span><span>09/10/2026</span></div><div class="stars">★★★★★</div><h4>Night feeds are so much easier</h4><p>45°C at 3am without fumbling with a kettle and a thermometer. My husband says this was the best baby purchase we made.</p></div>
+      <div class="rv"><div class="top"><span><span class="nm">Kenneth Yeo</span><span class="vb">✓ Verified buyer</span></span><span>05/10/2026</span></div><div class="stars">★★★★☆</div><h4>Took a few days to get used to</h4><p>First few days I kept reaching for the kettle out of habit. By the second week I couldn't imagine going back. Would love a bigger cold tank.</p></div>
+      <div class="rv"><div class="top"><span><span class="nm">Grace Lee</span><span class="vb">✓ Verified buyer</span></span><span>01/10/2026</span></div><div class="stars">★★★★★</div><h4>Heart Service is worth it</h4><p>The technician came on time, explained everything and was in and out quickly. One less thing for my parents to manage.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final">
+  <div class="wrap">
+    <div class="kicker" style="color:#E6F7FD">Clean water. Zero waiting.</div>
+    <h2>One touch, any temperature,<br>every single day.</h2>
+    <p class="sub">Clean water, at the right temperature, in one touch. From S$472/mth.</p>
+    <a class="btn" href="#plans">Choose your Icon 2 plan</a>
+    <ul><li>✓ Installed by Coway professionals</li><li>✓ 2 years filters, 1-year warranty</li></ul>
+    <p class="disc">Items tagged SAMPLE on this page are placeholder content for review.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><svg width="105" height="24" viewBox="0 0 105 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#FFFFFF" d="M80.4442311,9.24125532 C80.5977686,6.30835932 79.5126343,4.37850673 77.2058675,4.25834088 C74.8498352,4.06526332 73.0183123,6.11952725 72.6032609,9.04503979 C72.1941362,11.9740595 73.5068913,14.3489503 75.7397601,14.5494113 C78.6075224,14.8163235 80.2721728,12.2345111 80.4442311,9.24125532 Z M85.3326137,11.1626169 C85.3326137,12.3971319 85.9215755,14.1220934 86.7496409,15.3566084 C86.985596,15.6890488 87.1793237,16.2555449 87.0206003,16.8441915 C86.8702114,17.4140103 86.404413,17.8743692 85.6793233,18.1885355 C85.3083514,18.3467262 84.9616419,18.4259138 84.6301194,18.4259138 C84.0315268,18.4259138 83.5164631,18.1652776 83.0543689,17.6102258 C82.7700744,17.2558196 82.4776308,16.8441915 82.1375888,16.2555449 C80.9291059,17.4287772 79.0616526,18.7277129 75.7819876,18.7277129 C71.293284,18.7277129 67.6965427,15.2848042 67.6965427,9.70124505 C67.6965427,4.46618535 71.5196083,0.112526529 77.031031,0.112526529 C81.0239325,0.112526529 85.3326137,2.80822879 85.3326137,8.76114565 L85.3326137,11.1626169 Z M92.5467841,20.5329511 L94.7646511,14.8585753 L88.7531666,3.60119423 C87.6187669,1.47992538 87.8686127,0.826858094 88.7150137,0.377389798 C90.1753796,-0.400273419 92.3836158,-0.00341229474 93.3570695,1.82288722 L97.1112377,8.84880581 L99.7000766,2.20811939 C100.459059,0.263869058 102.608585,-0.389198225 104.146367,0.22233708 C105.0387,0.574159081 105.360777,1.20452221 104.47826,3.46570769 L97.3249679,21.7933082 C96.5652443,23.7366356 94.415719,24.3898874 92.8758989,23.7789059 C91.9861592,23.4276376 91.6622302,22.7967207 92.5467841,20.5329511 Z M63.0865834,0.116753562 C64.2232056,0.116753562 65.2548147,0.724412548 65.0355283,1.70253678 L61.7062275,16.3420976 C61.3917441,17.7200363 60.1508498,18.5693191 58.6147338,18.5693191 C57.0110169,18.5693191 55.7401189,17.6674292 55.3917425,16.3420976 L53.5509592,8.59130755 L51.7081386,16.3420976 C51.361429,17.6674292 50.0886789,18.5693191 48.4864436,18.5693191 C46.9484756,18.5693191 45.7062848,17.7200363 45.394024,16.3420976 L42.0660196,1.70253678 C41.8426586,0.724412548 42.8766755,0.116753562 44.0129272,0.116753562 C45.6170145,0.116753562 46.4978643,0.830549825 46.7478952,2.14037612 L48.5999762,12.5069424 C48.6116443,12.5669331 48.7005442,12.570071 48.7138792,12.5110033 L51.1151022,2.60848766 C51.5658987,0.887033316 52.0772583,0.116753562 53.5509592,0.116753562 C55.0207707,0.116753562 55.5337971,0.887033316 55.9825563,2.60848766 L58.3839646,12.5110033 C58.3987812,12.570071 58.4861994,12.5669331 58.4980527,12.5069424 L60.3501338,2.14037612 C60.6036836,0.830549825 61.4828665,0.116753562 63.0865834,0.116753562 Z M29.850323,14.5832829 C32.5130599,14.5832829 34.4716355,12.6619213 34.4716355,9.41855072 C34.4716355,6.17961018 32.5130599,4.25418768 29.850323,4.25418768 C27.1894382,4.25418768 25.2290105,6.17961018 25.2290105,9.41855072 C25.2290105,12.6619213 27.1894382,14.5832829 29.850323,14.5832829 Z M29.850323,0.112434236 C36.092762,0.112434236 39.3522394,4.28150649 39.3522394,9.41855072 C39.3522394,14.5559641 36.092762,18.7276206 29.850323,18.7276206 C23.6099212,18.7276206 20.3485918,14.5559641 20.3485918,9.41855072 C20.3485918,4.28150649 23.6099212,0.112434236 29.850323,0.112434236 Z M15.9036344,13.0882055 C16.3657286,13.3560407 16.9300577,14.1938791 16.7596663,15.1044446 C16.3731369,17.1913804 13.6876195,18.7276944 9.95308334,18.7276944 C2.87905993,18.7276944 -2.4158453e-13,14.2656833 -2.4158453e-13,9.41862455 C-2.4158453e-13,4.28158033 3.26188507,0.112508071 9.50210162,0.112508071 C13.7635548,0.112508071 16.8524555,2.22270173 17.1195256,3.91849854 C17.3656672,5.45056707 15.2746677,7.07012963 13.6876195,5.82823119 C12.4074611,4.82795657 11.2786177,4.25407693 9.50210162,4.25407693 C6.84103162,4.25407693 4.87912221,6.17968402 4.87912221,9.41862455 C4.87912221,13.0575642 7.19514951,14.5600989 9.60637378,14.8775878 C11.3013983,15.1044446 14.1421202,14.734164 15.9036344,13.0882055 Z"/></svg><p style="margin-top:12px;max-width:340px">Clean water and clean air for Singapore homes, backed by Korean R&amp;D since 1989.</p></div>
+      <div><h5>Shop</h5><a href="https://www.coway.sg/products-list/water-purifier">Water purifiers</a><a href="https://www.coway.sg/products-list/air-purifier">Air purifiers</a><a href="https://www.coway.sg/products-list/bidet">Bidet seats</a></div>
+      <div><h5>Learn</h5><a href="https://www.coway.sg/brand-story">Brand story</a><a href="https://www.coway.sg/heart-service">Heart Service</a><a href="https://www.coway.sg/self-care-service">Self-Service</a></div>
+      <div><h5>Connect</h5><a href="https://www.coway.sg/enquiry">Contact us</a><a href="https://www.coway.sg/refund-policy">Refund policy</a><a href="https://www.coway.sg/warranty-policy">Warranty policy</a></div>
+    </div>
+    <div class="legal">Sample draft based on publicly available information from coway.sg (Oct 2026). Coway and Icon are trademarks of Coway Co., Ltd. Items tagged SAMPLE, including reviews, survey figures, bundle pricing and the promo code, are placeholders and must be replaced or approved before any use. © Coway Singapore Pte. Ltd.</div>
+  </div>
+</footer>
+
+<div class="sticky" id="stickyCart"><img src="https://cms.coway.sg/stocks/products_gallery/o0x0/hj/rx/noqchjrx46k/Icon_white_1.webp" alt=""><div class="sinfo"><b class="sname">Icon 2 - Instant Hot &amp; Cold Water Purifier</b><span class="srate"><span class="stars">★★★★★</span> 4.8</span><span id="sPlan">2-Year Heart Service · S$2,038</span></div><a class="btn" href="#plans" id="sBtn">Add to cart</a></div>
+
+<script>
+(function(){
+  var main=document.getElementById('gmain');
+  document.querySelectorAll('#gthumbs img').forEach(function(t){t.onclick=function(){main.src=t.src;document.querySelectorAll('#gthumbs img').forEach(function(x){x.className=''});t.className='on'}});
+  var plans=[].slice.call(document.querySelectorAll('.plan[data-price]')), trade=document.getElementById('trade');
+  function fmt(n){return 'S$'+n.toLocaleString('en-SG',{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2})}
+  function calc(){
+    var p=document.querySelector('.plan.on[data-price]');
+    var price=+p.dataset.price, list=+p.dataset.list;
+    var final=trade.checked?Math.round(price*0.9*100)/100:price;
+    document.getElementById('saving').textContent=fmt(Math.round((list-final)*100)/100);
+    document.getElementById('buy').textContent='Get my '+(p.dataset.name==='Home Bundle'?'Home Bundle':'Icon 2')+' for '+fmt(final)+' →';
+    var sp=document.getElementById('sPlan'); if(sp) sp.textContent=p.querySelector('.name').textContent+' · '+fmt(final);
+    document.getElementById('tradeRow').classList.toggle('on',trade.checked);
+    plans.forEach(function(x){var m=x.querySelector('.mth');if(!m)return;var v=+x.dataset.price*(trade.checked?0.9:1)/4;m.textContent=fmt(Math.round(v*100)/100)+'/mth';});
+  }
+  plans.forEach(function(p){p.onclick=function(){plans.forEach(function(x){x.classList.remove('on')});p.classList.add('on');calc()}});
+  trade.addEventListener('change',calc); calc();
+  var sc=document.getElementById('stickyCart'), buyBtn=document.getElementById('buy');
+  new IntersectionObserver(function(e){sc.classList.toggle('show',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(buyBtn);
+  var cio=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;var el=en.target,to=+el.dataset.to,t0=null;cio.unobserve(el);
+    function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/1600,1),e=1-Math.pow(1-k,3);el.textContent=Math.round(to*e)+'%';if(k<1)requestAnimationFrame(step)}requestAnimationFrame(step)})},{threshold:.5});
+  document.querySelectorAll('.count').forEach(function(c){cio.observe(c)});
+  document.querySelectorAll('#temps .tt').forEach(function(b){b.onclick=function(){var k=b.dataset.t;
+    document.querySelectorAll('#temps .tt').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('#temps .tp').forEach(function(x){x.classList.toggle('on',x.dataset.t===k)});}});
+  var info=document.getElementById('binfo');
+  document.querySelectorAll('#badges button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#badges button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');info.innerHTML=b.dataset.i}});
+})();
+</script>
+</body>
+</html>
